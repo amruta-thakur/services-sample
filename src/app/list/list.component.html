@@ -1,0 +1,13 @@
+<form #frm='ngForm' (ngSubmit)=addItem(frm)>
+	<input type="text" name="itemText" ngModel>
+	<button type="submit" class="btn btn-success">Add Item</button>
+</form>
+
+
+<button type="button" (click)="getDataFromServiceClass()" class="btn btn-info">Show List</button>
+
+<ul class="list-group">
+	<li *ngFor="let item of itemsRecieved" class="list-group-item">
+		{{item}}
+	</li>
+</ul>
